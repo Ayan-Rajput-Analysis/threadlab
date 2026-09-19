@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #0D0A1A;
+  --color-bg-sections: #1A1028;
+  --color-accent-primary: #C9A96E;
+  --color-accent-secondary: #E8D5B7;
+  --color-text-primary: #F5F0EB;
+  --color-text-muted: #9B8FB0;
+  --color-canvas-backdrop: #12091E;
+
+  --font-heading: var(--font-cormorant), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  :root {
+    --bg-primary: #0D0A1A;
+    --bg-sections: #1A1028;
+    --accent-primary: #C9A96E;
+    --accent-secondary: #E8D5B7;
+    --text-primary: #F5F0EB;
+    --text-muted: #9B8FB0;
+    --canvas-backdrop: #12091E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased;
+    font-family: var(--font-body);
+  }
+
+  ::selection {
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
+  }
+}
+
+@layer utilities {
+  .text-h1 {
+    @apply font-heading text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight;
+  }
+  .text-h2 {
+    @apply font-heading text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight;
+  }
+  .text-h3 {
+    @apply font-heading text-3xl md:text-4xl font-medium;
+  }
+  .text-body-large {
+    @apply text-lg md:text-xl font-light leading-relaxed;
+  }
+  .text-body {
+    @apply text-base font-light leading-relaxed;
+  }
+  .text-body-small {
+    @apply text-sm font-light text-[var(--text-muted)];
+  }
+}
