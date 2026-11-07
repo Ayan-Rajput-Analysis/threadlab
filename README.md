@@ -20,7 +20,7 @@
 > **Governing Mandate:** Architect an editorial digital fashion platform that fuses 3D-rendered looping textile cinematics, inertial scroll physics, and CSS 3D perspective commerce interactions inside a Next.js 16 and React 19 server/client architecture.
 
 - **Inertial Scroll & GSAP Choreography:** Couples **Lenis `1.3.26`** momentum scrolling with **GSAP `3.15` (`ScrollTrigger`)** split-typography reveals ([`AnimatedText.tsx`](src/components/shared/AnimatedText.tsx)), scroll-scrubbed `1.3x` textile video zoom, and 5 multi-palette editorial chapters (`#0A0A0A` Obsidian, `#F5EDE0` Linen, `#0A1628` Deep Navy, `#1A1410` Espresso).
-- **CSS 3D Perspective Atelier & Reactive Cart:** Engineers a full-screen 10-garment bespoke suit showcase ([`ShopGallery.tsx`](src/components/shared/ShopGallery.tsx), `` `$1,200` ``–`` `$2,550` ``) featuring `perspective: 1200px` / `transform-style-3d` card choreography (`rotationX` GSAP stagger) wired to a zero-re-render **Zustand `5.0`** slide-over cart ([`CartDrawer.tsx`](src/components/shared/CartDrawer.tsx)).
+- **CSS 3D Perspective Atelier & Reactive Cart:** Engineers a full-screen 10-garment bespoke suit showcase ([`ShopGallery.tsx`](src/components/shared/ShopGallery.tsx), `$1,200–$2,550`) featuring `perspective: 1200px` / `transform-style-3d` card choreography (`rotationX` GSAP stagger) wired to a zero-re-render **Zustand `5.0`** slide-over cart ([`CartDrawer.tsx`](src/components/shared/CartDrawer.tsx)).
 - **Production Edge Caching & Hardening:** Configures [`netlify.toml`](netlify.toml) with `@netlify/plugin-nextjs`, 1-year `immutable` edge caching (`max-age=31536000`) across `/frames/*` and `/_next/static/*`, and strict `X-Frame-Options: DENY` and `X-Content-Type-Options: nosniff` headers.
 
 ---
@@ -48,7 +48,7 @@ flowchart LR
 | **01 // The Craft** | [`src/app/page.tsx`](src/app/page.tsx) | `#F5EDE0` warm linen + `#2A1810` espresso type + `/videos/fabric.mp4` ripple showcase | `500+` manufacturers • `40+` countries • `10K+` designs |
 | **02 // The Collection (Portfolio)** | [`src/app/page.tsx`](src/app/page.tsx) | `#0A1628` deep navy + `#D4A853` gold accents + `/videos/orbit.mp4` 3D dress orbit | 3 interactive `UiverseCard` couture pillars |
 | **03 // The Detail (Process)** | [`src/app/page.tsx`](src/app/page.tsx) | `#1A1410` espresso + `/videos/texture.mp4` with GSAP `1.0x -> 1.3x` scroll-scrubbed zoom | 4-stage pipeline (`Design -> Prototype -> Manufacture -> Deliver`) |
-| **04 // Interactive Atelier Shop** | [`src/components/shared/ShopGallery.tsx`](src/components/shared/ShopGallery.tsx) | `perspective: 1200px` 3D grid, `rotationX: 15 -> 0` `back.out(1.2)` stagger & `data-lenis-prevent` lock | **10 bespoke suits** (`Suit Collection No. 1–10`, `` `$1,200` ``–`` `$2,550` ``) |
+| **04 // Interactive Atelier Shop** | [`src/components/shared/ShopGallery.tsx`](src/components/shared/ShopGallery.tsx) | `perspective: 1200px` 3D grid, `rotationX: 15 -> 0` `back.out(1.2)` stagger & `data-lenis-prevent` lock | **10 bespoke suits** (`Suit Collection No. 1–10`, `$1,200–$2,550`) |
 | **05 // Reactive Cart Drawer** | [`src/components/shared/CartDrawer.tsx`](src/components/shared/CartDrawer.tsx) | Slide-over glassmorphic bag synced via Zustand selector subscriptions (`totalItems`) | Instant add/remove/quantity state with zero prop drilling |
 
 ---
